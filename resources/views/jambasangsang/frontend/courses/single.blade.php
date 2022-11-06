@@ -12,8 +12,8 @@
                         <h2>{{ $course->name }}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ url('/') }}">@lang('Home')</a></li>
-                                <li class="breadcrumb-item"><a href="{{ route('Courses.index') }}">@lang('Courses')</a>
+                                <li class="breadcrumb-item"><a href="{{ url('/') }}">@lang('Inicio')</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('Courses.index') }}">@lang('Cursos')</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $course->name }}</li>
                             </ol>
@@ -55,27 +55,27 @@
                                                 alt="{{ $course->teacher->name }}" width="50" height="50">
                                         </div>
                                         <div class="name">
-                                            <span>@lang('Teacher')</span>
+                                            <span>@lang('Profesor')</span>
                                             <h6>{{ $course->teacher->name }}</h6>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="course-category">
-                                        <span>@lang('Category')</span>
+                                        <span>@lang('Categoria')</span>
                                         <h6>{{ $course->category->name }} </h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="review">
-                                        <span>@lang('Review')</span>
+                                        <span>@lang('Calificación')</span>
                                         <ul>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li class="rating">(20 Reviws)</li>
+                                            <li class="rating">(Calificaciones)</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -90,19 +90,19 @@
                             <ul class="nav nav-justified" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="active" id="overview-tab" data-toggle="tab" href="#overview"
-                                        role="tab" aria-controls="overview" aria-selected="true">@lang('Overview')</a>
+                                        role="tab" aria-controls="overview" aria-selected="true">@lang('Resumen')</a>
                                 </li>
                                 <li class="nav-item">
                                     <a id="curriculam-tab" data-toggle="tab" href="#curriculam" role="tab"
-                                        aria-controls="curriculam" aria-selected="false">@lang('Curriculam')</a>
+                                        aria-controls="curriculam" aria-selected="false">@lang('Plan de estudios')</a>
                                 </li>
                                 <li class="nav-item">
                                     <a id="instructor-tab" data-toggle="tab" href="#instructor" role="tab"
-                                        aria-controls="instructor" aria-selected="false">@lang('Instructor')</a>
+                                        aria-controls="instructor" aria-selected="false">@lang('Profesor')</a>
                                 </li>
                                 <li class="nav-item">
                                     <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
-                                        aria-selected="false">@lang('Reviews')</a>
+                                        aria-selected="false">@lang('Calificación')</a>
                                 </li>
                             </ul>
 
@@ -122,32 +122,32 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
-                                <h4>@lang('Course Features') </h4>
+                                <h4>@lang('Características del curso') </h4>
                                 <ul>
-                                    <li><i class="fa fa-clock-o"></i>@lang('Duaration') :
+                                    <li><i class="fa fa-clock-o"></i>@lang('Duración') :
                                         <span>{{ $course->duration }}</span>
                                     </li>
-                                    <li><i class="fa fa-clone"></i>@lang('Leactures') :
+                                    <li><i class="fa fa-clone"></i>@lang('Clases') :
                                         <span>{{ count($course->lessons) }}</span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i>@lang('Quizzes') :
+                                    <li><i class="fa fa-beer"></i>@lang('Pruebas') :
                                         <span>{{ count($course->quizzes) }}</span>
                                     </li>
-                                    <li><i class="fa fa-user-o"></i>@lang('Students') :
+                                    <li><i class="fa fa-user-o"></i>@lang('Estudiantes') :
                                         <span>{{ count($course->students) }}</span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">
-                                    <span>@lang('Price') : <b>{{ $course->price() }}</b></span>
+                                    <span>@lang('Precio') : <b>{{ $course->price() }}</b></span>
                                     <button value="{{ $course->id }}" name="course_id" data-toggle="modal"
                                         data-target="#enrolledModal"
-                                        class="main-btn entrolledBtn">@lang('Enroll Now')</button>
+                                        class="main-btn entrolledBtn">@lang('Inscribirse')</button>
                                 </div>
                             </div> <!-- course features -->
                         </div>
                         <div class="col-lg-12 col-md-6">
                             <div class="You-makelike mt-30">
-                                <h4>@lang('You make like') </h4>
+                                <h4>@lang('Otros cursos') </h4>
                                 @foreach ($courses_you_may_like as $you_may_like)
                                     <div class="singel-makelike mt-20">
                                         <div class="image">
@@ -171,45 +171,7 @@
                     </div>
                 </div>
             </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="releted-courses pt-95">
-                        <div class="title">
-                            <h3>@lang('Releted Courses')</h3>
-                        </div>
-                        <div class="row">
-                            @foreach ($related_courses as $course)
-                                <div class="col-md-6">
-                                    <div class="singel-course mt-30">
-                                        <div class="thum">
-                                            <div class="image">
-                                                <img src="{{ $course->image() }}" alt="{{ $course->name }}">
-                                            </div>
-                                            <div class="price">
-                                                <span>{{ $course->price() }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="cont">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <span>(20 Reviws)</span>
-                                            <a href="{{ $course->link() }}">
-                                                <h4>{{ $course->name }}</h4>
-                                            </a>
-                                            @include('jambasangsang.frontend.courses.teachers')
-                                        </div>
-                                    </div> <!-- singel course -->
-                                </div>
-                            @endforeach
-                        </div> <!-- row -->
-                    </div> <!-- releted courses -->
-                </div>
-            </div> <!-- row -->
+            
         </div> <!-- container -->
     </section>
 

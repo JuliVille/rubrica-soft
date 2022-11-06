@@ -1,7 +1,7 @@
 <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
     <div class="reviews-cont">
         <div class="title">
-            <h6>@lang('Only Student Reviews')</h6>
+            <h6>@lang('Solo reseñas de estudiantes')</h6>
         </div>
         <ul>
             @forelse ($course->reviews as $review)
@@ -33,11 +33,11 @@
                     </div> <!-- singel reviews -->
                 </li>
             @empty
-                <li class="mt-5"><strong>0 @lang('review')</strong></li>
+                <li class="mt-5"><strong>0 @lang('Calificaciones')</strong></li>
             @endforelse
         </ul>
         <div class="title pt-15">
-            <h6>@lang('Leave A Comment')</h6>
+            <h6>@lang('Deja un comentario')</h6>
         </div>
         <div class="reviews-form">
             <form action="{{ route('reviews.store') }}" method="post">
@@ -59,7 +59,7 @@
                     <div class="col-lg-12">
                         <div class="form-singel">
                             <div class="rate-wrapper">
-                                <div class="rate-label">Your Rating:</div>
+                                <div class="rate-label">Calificación</div>
                                 <div class="rate">
                                     <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
                                     <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
@@ -72,13 +72,12 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-singel">
-                            <textarea placeholder="Comment" name="content"></textarea>
+                            <textarea placeholder="Comentario" name="content"></textarea>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-singel">
-                            <button type="submit" class="main-btn">Post
-                                Review</button>
+                            <button type="submit" class="main-btn">Calificar</button>
                         </div>
                     </div>
                 </div> <!-- row -->

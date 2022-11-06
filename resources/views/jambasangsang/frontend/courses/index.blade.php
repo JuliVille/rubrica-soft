@@ -43,12 +43,11 @@
                                 <a id="courses-list-tab" data-toggle="tab" href="#courses-list" role="tab"
                                     aria-controls="courses-list" aria-selected="false"><i class="fa fa-th-list"></i></a>
                             </li>
-                            <li class="nav-item">Showning 4 0f 24 Results</li>
                         </ul> <!-- nav -->
 
                         <div class="courses-search float-right">
                             <form action="#">
-                                <input type="text" placeholder="Search">
+                                <input type="text" placeholder="Buscar">
                                 <button type="button"><i class="fa fa-search"></i></button>
                             </form>
                         </div> <!-- courses search -->
@@ -77,7 +76,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
-                                        <span>(20 Reviws)</span>
+                                        <span>(0 Calificaciones)</span>
                                         <a href={{ route('Courses.single', [$course->id, $course->slug]) }}">
                                             {{-- <a href={{ $course->link() }}"> --}}
                                             <h4>{{ $course->name }}</h4>

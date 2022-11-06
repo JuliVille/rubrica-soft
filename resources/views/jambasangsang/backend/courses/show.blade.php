@@ -37,11 +37,6 @@
         <div class="col-md-4">
             <section class="card">
                 <div class="twt-feed blue-bg">
-                    <div class="corner-ribon black-ribon">
-                        <i class="fa fa-twitter"></i>
-                    </div>
-                    <div class="fa fa-twitter wtt-mark"></div>
-
                     <div class="media">
                         <a href="#">
                             <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt=""
@@ -58,29 +53,14 @@
                     <ul>
                         <li class="active">
                             <h5>{{ count($course->students) }}</h5>
-                            @lang('Students')
-                        </li>
-                        <li>
-                            <h5>865</h5>
-                            Following
+                            @lang('Estudiantes')
                         </li>
                         <li>
                             <h5>{{ count($course->lessons) }}</h5>
-                            @lang('Lessons')
+                            @lang('Clases')
                         </li>
                     </ul>
                 </div>
-                <div class="twt-write col-sm-12">
-                    <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                </div>
-                <footer class="twt-footer">
-                    <a href="#"><i class="fa fa-camera"></i></a>
-                    <a href="#"><i class="fa fa-map-marker"></i></a>
-                    New Castle, UK
-                    <span class="pull-right">
-                        32
-                    </span>
-                </footer>
             </section>
             @foreach ($course->students as $student)
                 <div class="card">
@@ -107,7 +87,7 @@
                     <h4 class="card-title mb-3">{{ $course->name }}
                         @can('add_lessons')
                             <a class="pull-right" href="{{ route('lessons.create', [$course->slug]) }}"><i
-                                    class="fa fa-address-card" aria-hidden="true"></i> Add Lesson</a>
+                                    class="fa fa-address-card" aria-hidden="true"></i> Agregar clase</a>
                         @endcan
 
                     </h4>
@@ -140,7 +120,7 @@
                             </div>
                         @empty
                             <div class="flex justify-between">
-                                <h2 class="text-center">No Lesson</h2>
+                                <h2 class="text-center">Sin clases</h2>
                             </div>
                         @endforelse
 

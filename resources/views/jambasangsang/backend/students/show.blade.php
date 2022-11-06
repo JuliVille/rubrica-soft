@@ -37,11 +37,6 @@
         <div class="col-md-4">
             <section class="card">
                 <div class="twt-feed blue-bg">
-                    <div class="corner-ribon black-ribon">
-                        <i class="fa fa-twitter"></i>
-                    </div>
-                    <div class="fa fa-twitter wtt-mark"></div>
-
                     <div class="media">
                         <a href="#">
                             <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt=""
@@ -54,33 +49,12 @@
                     </div>
 
                 </div>
-                <div class="weather-category twt-category">
-                    <ul>
-                        <li class="active">
-                            <h5>{{ $student->code }}</h5>
-                            @lang('ID')
-                        </li>
-                        <li>
-                            <h5>{{ $student->username }}</h5>
-                            @lang('Username')
-                        </li>
-                        <li>
-                            <h5>{{ $student->status }}</h5>
-                            @lang('Status')
-                        </li>
-                    </ul>
-                </div>
                 <div class="twt-write col-sm-12">
                     {{-- <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea> --}}
                 </div>
                 <footer class="twt-footer">
-                    <a href="#"><i class="fa fa-camera"></i></a>
-                    <a href="#"><i class="fa fa-map-marker"></i></a>
-                    {{ $student->address }}
-                    <br>
                     <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                     {{ $student->email }}
-
                 </footer>
             </section>
         </div>
@@ -88,7 +62,7 @@
             <div class="card">
                 {{-- <img class="card-img-top" src="{{ $student->image() }}" alt="{{ $student->name }}"> --}}
                 <div class="card-body">
-                    <h3 class="card-title mb-3">@lang('All Subscribed Courses') {{ count($student->courses) }}</h3>
+                    <h3 class="card-title mb-3">@lang('Cursos registrados:') {{ count($student->courses) }}</h3>
 
                     <div class="accordion" id="accordionExample">
                         @forelse ($student->courses as $key => $course)
@@ -107,13 +81,7 @@
                                                 @lang($course->course->name . ' ' . $key + 1) <br>
                                                 <span>{{ $course->course->teacher->name }}</span>
                                             </button>
-                                            <strong style="font-size: 18px !important"
-                                                class="pull-right">@lang('Lessons')
-                                                {{ count($course->course->lessons) }} <br> <span
-                                                    class="pull-right">{{ $course->course->status }}</span><br><i
-                                                    class="fa fa-user" aria-hidden="true">
-                                                    {{ count($course->course->students) }}</i>
-                                            </strong>
+
                                         </h2>
                                     </div>
                                 </div>
@@ -131,7 +99,7 @@
                                                 </li>
                                             @empty
                                                 <div class="flex justify-between">
-                                                    <h2 class="text-center">No Lesson</h2>
+                                                    <h2 class="text-center">Sin Clases</h2>
 
                                                 </div>
                                             @endforelse

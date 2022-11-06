@@ -27,8 +27,6 @@
                     <a class="nav-link" href="{{ Auth::user()->link() }}"><i class="fa fa-user"></i>
                         @lang(' Mi perfil')</a>
 
-                    <a class="nav-link" href="#"><i class="fa fa-cog"></i> @lang(' Configuracion')</a>
-
                     <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">

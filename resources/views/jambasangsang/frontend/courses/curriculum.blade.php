@@ -2,7 +2,7 @@
 aria-labelledby="curriculam-tab">
 <div class="curriculam-cont">
     <div class="title">
-        <h6>{{ $course->name }} @lang(' Lecture Started')</h6>
+        <h6>{{ $course->name }}</h6>
     </div>
     <div class="accordion" id="accordionExample">
         @foreach ($course->lessons as $key => $lesson)

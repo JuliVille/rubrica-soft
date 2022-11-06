@@ -1687,12 +1687,11 @@ header .form-inline {
   min-height: 170px; }
 
 .weather-category {
-  padding: 15px 0;
   color: #74829C; }
   .weather-category ul li {
-    width: 32%;
+    width: 48%;
     text-align: center;
-    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
     display: inline-block; }
 
 .twt-feed.blue-bg {
