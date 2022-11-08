@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav">
                 @can('view_dashboard')
                     <li class="{{ is_active('home') }}">
-                        <a href="{{ route('home') }}"> <i class="menu-icon fa fa-home"></i>@lang('Dashboard') </a>
+                        <a href="{{ route('home') }}"> <i class="menu-icon fa fa-home"></i>@lang('Panel') </a>
                     </li>
                 @endcan
 
@@ -28,14 +28,14 @@
                     <h3 class="menu-title">@lang('manage courses')</h3><!-- /.menu-title -->
                     @can('view_courses')
                         <li class="{{ is_active('courses.*') }}">
-                            <a href="{{ route('courses.index') }}"> <i class="menu-icon fa fa-book"></i>@lang('Courses')
+                            <a href="{{ route('courses.index') }}"> <i class="menu-icon fa fa-book"></i>@lang('Cursos')
                             </a>
                         </li>
                     @endcan
 
                     @can('view_lessons')
                         <li class="{{ is_active('lessons.*') }}">
-                            <a href="{{ route('lessons.index') }}"> <i class="menu-icon fa fa-table"></i>@lang('Lessons')
+                            <a href="{{ route('lessons.index') }}"> <i class="menu-icon fa fa-table"></i>@lang('Clases')
                             </a>
                         </li>
                     @endcan

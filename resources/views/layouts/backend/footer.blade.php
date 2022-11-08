@@ -3,6 +3,7 @@
 <script src="{{ asset('jambasangsang/backend/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('jambasangsang/backend/assets/js/main.js') }}"></script>
 
+
 @yield('script')
 <script>
     (function($) {

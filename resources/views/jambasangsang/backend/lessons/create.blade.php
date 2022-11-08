@@ -5,7 +5,7 @@
             <div class="col-lg-12 m-auto py-2">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">@lang('Create Lesson for  ') ({{ $course->name }})</strong>
+                        <strong class="card-title">@lang('Crear clase para  ') ({{ $course->name }})</strong>
                     </div>
                     <div class="card-body">
                         <!-- Credit Card -->
@@ -19,7 +19,7 @@
                                     <div class="row mb-3">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="title" class="control-label mb-1">@lang('Title') *</label>
+                                                <label for="title" class="control-label mb-1">@lang('Titulo') *</label>
                                                 <input id="photo" name="title" type="title" class="form-control title"
                                                     value="" autocomplete="title">
 
@@ -38,12 +38,12 @@
                                         </div>
 
                                         <div class="col-6 mt-3">
-                                            <label for="x_card_code" class="control-label mb-1">@lang('Status')</label>
+                                            <label for="x_card_code" class="control-label mb-1">@lang('Estado')</label>
                                             <div class="input-group">
                                                 <select name="status" id="status" class="form-control">
-                                                    <option value="">@lang('Select Status')</option>
-                                                    <option value="enabled">@lang('Enabled')</option>
-                                                    <option value="disabled">@lang('Disabled')</option>
+                                                    <option value="">@lang('Seleccionar estado')</option>
+                                                    <option value="enabled">@lang('Activado')</option>
+                                                    <option value="disabled">@lang('Desactivado')</option>
                                                 </select>
                                             </div>
                                             @error('status')
@@ -66,7 +66,7 @@
                                     <div class="mt-4">
                                         <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
                                             <i class="fa fa-save fa-lg"></i>&nbsp;
-                                            <span id="payment-button-amount">@lang('Create Lesson')</span>
+                                            <span id="payment-button-amount">@lang('Crear clase')</span>
                                         </button>
                                     </div>
                                 </form>
@@ -83,7 +83,9 @@
 @endsection
 
 @section('script')
-    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+
+<!--<script src="C:\Users\Julian\Desktop\rubrica-soft\public\ckeditor\ckeditor.js"></script>-->
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content');
     </script>
