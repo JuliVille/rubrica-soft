@@ -11,25 +11,24 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <strong class="card-title">@lang('Courses List')</strong>
+                    <strong class="card-title">@lang('Lista de cursos')</strong>
                     @can('add_courses')
                         <a href="{{ route('courses.create') }}"
-                            class="pull-right btn btn-sm btn-success">@lang('New Course')</a>
+                            class="pull-right btn btn-sm btn-success">@lang('Nuevo curso')</a>
                     @endcan
                 </div>
                 <div class="card-body">
                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>@lang('Code')</th>
-                                <th>@lang('Name')</th>
-                                <th>@lang('Price')</th>
-                                <th>@lang('Duration')</th>
-                                <th>@lang('Instructor')</th>
-                                <th>@lang('Status')</th>
-                                @can('delete_courses' || 'edit_courses' || 'add_lessons')
-                                    <th>@lang('Action')</th>
-                                @endcan
+                                <th>@lang('Codigo')</th>
+                                <th>@lang('Nombre')</th>
+                                <th>@lang('Precio')</th>
+                                <th>@lang('Duracion')</th>
+                                <th>@lang('Profesor')</th>
+                                <th>@lang('Estado')</th>
+                                <th>@lang('Accion')</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -44,13 +43,9 @@
                                     <td>{{ $course->duration }}</td>
                                     <td>{{ $course->teacher->name }}</td>
                                     <td>{{ $course->status }}</td>
-                                    @can('delete_courses' || 'edit_courses' || 'add_lessons')
+                                    
                                         <td>
                                             <div class="btn-group">
-                                                @can('add_lessons')
-                                                    <a href="{{ route('lessons.create', [$course->slug]) }}"
-                                                        class="btn btn-sm btn-info"><i class="fa fa-book"></i></a>
-                                                @endcan
                                                 @can('edit_courses')
                                                     <a href="{{ route('courses.edit', [$course->id]) }}"
                                                         class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
@@ -61,7 +56,6 @@
                                                 @endcan
                                             </div>
                                         </td>
-                                    @endcan
                                 </tr>
                             @endforeach
                         </tbody>

@@ -514,7 +514,7 @@
                                                             <div class="input-group">
                                                                 <div class="input-group-btn">
                                                                     <button class="btn btn-primary">
-                                                                        <i class="fa fa-search"></i> Search
+                                                                        <i class="fa fa-search"></i> Buscar
                                                                     </button>
                                                                 </div>
                                                                 <input type="text" id="input1-group2" name="input1-group2" placeholder="Username" class="form-control">

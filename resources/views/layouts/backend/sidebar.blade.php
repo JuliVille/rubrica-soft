@@ -25,7 +25,7 @@
                     auth()->user()->can('view_courses')) ||
                     auth()->user()->can('view_lessons') ||
                     auth()->user()->can('view_categories'))
-                    <h3 class="menu-title">@lang('manage courses')</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">@lang('Administrar Cursos')</h3><!-- /.menu-title -->
                     @can('view_courses')
                         <li class="{{ is_active('courses.*') }}">
                             <a href="{{ route('courses.index') }}"> <i class="menu-icon fa fa-book"></i>@lang('Cursos')
@@ -33,12 +33,6 @@
                         </li>
                     @endcan
 
-                    @can('view_lessons')
-                        <li class="{{ is_active('lessons.*') }}">
-                            <a href="{{ route('lessons.index') }}"> <i class="menu-icon fa fa-table"></i>@lang('Clases')
-                            </a>
-                        </li>
-                    @endcan
                     @can('view_categories')
                         <li class="{{ is_active('categories.*') }}">
                             <a href="{{ route('categories.index') }}"> <i

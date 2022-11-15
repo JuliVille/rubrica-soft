@@ -10,9 +10,9 @@
                             <p data-animation="fadeInUp" data-delay="1.3s">UN PASO ADELANTE ESTE AÑO</p>
                             <ul>
                                 <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn"
-                                        href="#">@lang('LEER MÁS')</a></li>
+                                        href="/aboutUs">@lang('LEER MÁS')</a></li>
                                 <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2"
-                                        href="#">@lang('INICIAR')</a></li>
+                                        href="/Courses">@lang('INICIAR')</a></li>
                             </ul>
                         </div>
                     </div>

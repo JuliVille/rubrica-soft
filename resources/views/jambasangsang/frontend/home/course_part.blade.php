@@ -28,7 +28,7 @@
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
-                            <span>(20 Reviws)</span>
+                            <span>(0 calificaciones)</span>
                             <a href="{{ $course->link() }}">
                                 <h4>{{ $course->name }}</h4>
                             </a>

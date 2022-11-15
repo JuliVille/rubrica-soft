@@ -12,7 +12,7 @@
                         <h2>Teachers</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Teachers</li>
                             </ol>
                         </nav>
@@ -116,7 +116,7 @@
                                                         <li><i class="fa fa-star"></i></li>
                                                         <li><i class="fa fa-star"></i></li>
                                                     </ul>
-                                                    <span>(20 Reviws)</span>
+                                                    <span>(0 calificaciones)</span>
                                                     <a href="#">
                                                         <h4>Learn basis javascirpt from start for beginner</h4>
                                                     </a>
@@ -162,7 +162,7 @@
                                                         <li><i class="fa fa-star"></i></li>
                                                         <li><i class="fa fa-star"></i></li>
                                                     </ul>
-                                                    <span>(20 Reviws)</span>
+                                                    <span>(0 calificaciones)</span>
                                                     <a href="#">
                                                         <h4>Learn basis javascirpt from start for beginner</h4>
                                                     </a>

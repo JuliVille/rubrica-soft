@@ -9,7 +9,7 @@
                 <div class="about-cont">
                     <p>{{ Config::get('settings.about') }}</p>
                     <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione accusantium reiciendis laudantium praesentium excepturi.</h6>
-                    <a href="#" class="main-btn mt-55">@lang('LEER MÁS')</a>
+                    <a href="/" class="main-btn mt-55">@lang('LEER MÁS')</a>
                 </div>
             </div> <!-- about cont -->
             <div class="col-lg-6 offset-lg-1">

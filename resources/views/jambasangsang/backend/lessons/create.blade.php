@@ -5,7 +5,7 @@
             <div class="col-lg-12 m-auto py-2">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">@lang('Crear clase para  ') ({{ $course->name }})</strong>
+                        <strong class="card-title">@lang('Crear clase  ') ({{ $course->name }})</strong>
                     </div>
                     <div class="card-body">
                         <!-- Credit Card -->
@@ -42,8 +42,8 @@
                                             <div class="input-group">
                                                 <select name="status" id="status" class="form-control">
                                                     <option value="">@lang('Seleccionar estado')</option>
-                                                    <option value="enabled">@lang('Activado')</option>
-                                                    <option value="disabled">@lang('Desactivado')</option>
+                                                    <option value="enabled">@lang('Habilitado')</option>
+                                                    <option value="disabled">@lang('Deshabilitado')</option>
                                                 </select>
                                             </div>
                                             @error('status')
@@ -84,8 +84,8 @@
 
 @section('script')
 
-<!--<script src="C:\Users\Julian\Desktop\rubrica-soft\public\ckeditor\ckeditor.js"></script>-->
 <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+
     <script>
         CKEDITOR.replace('content');
     </script>

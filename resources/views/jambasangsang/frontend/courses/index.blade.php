@@ -14,7 +14,7 @@
                         </h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">@lang('Inicio')</a></li>
+                                <li class="breadcrumb-item"><a href="/">@lang('Inicio')</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">@lang('Cursos')</li>
                             </ol>
                         </nav>
@@ -131,7 +131,7 @@
                                                     <li><i class="fa fa-star"></i></li>
                                                     <li><i class="fa fa-star"></i></li>
                                                 </ul>
-                                                <span>(20 Reviws)</span>
+                                                <span>(0 calificaciones)</span>
                                                 <a href="{{ $course->link() }}">
                                                     <h4>{{ $course->name }}</h4>
                                                 </a>
